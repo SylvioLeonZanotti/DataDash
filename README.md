@@ -14,7 +14,15 @@ DataDash é uma ferramenta poderosa para automação de tarefas em planilhas Exc
 
 🌐  **API para integrar a funcionalidade do DataDash com outras aplicações**
 
-🛠️  **Tecnologias Utilizadas**
+- **Bibliotecas** 📖
+**Flask**: Framework web para criar a API
+**Pandas**: Manipulação de dados
+**Matplotlib** e Seaborn: Criação de gráficos
+**FPDF**: Geração de PDFs
+**Pillow**: Manipulação de imagens
+**ttkbootstrap**: Interface gráfica moderna
+
+
 
 # Instalação 🛠️ 
 Clone o repositório:
