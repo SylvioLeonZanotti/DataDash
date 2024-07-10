@@ -1,4 +1,4 @@
-#**DataDash API e Projeto**
+# **DataDash API e Projeto**
 
 DataDash é uma ferramenta poderosa para automação de tarefas em planilhas Excel. Com o DataDash, você pode carregar arquivos Excel, gerar gráficos e criar dashboards completos em formato PDF. Este projeto utiliza Python e várias bibliotecas para fornecer uma interface intuitiva e uma API robusta.
 
