@@ -32,4 +32,5 @@ DataDash é uma ferramenta poderosa para automação de tarefas em planilhas Exc
 
 # **Instalação** 🛠️ 
 Clone o repositório:
-``` git clone https://github.com/seu-usuario/DataDash.git ```
+``` git clone https://github.com/seu-usuario/DataDash.git
+```
