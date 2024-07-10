@@ -38,13 +38,13 @@ git clone https://github.com/seu-usuario/DataDash.git
 ![image](https://github.com/SylvioLeonZanotti/DataDash/assets/123652053/be6d89f5-4c96-4d10-84cf-1edb24ada90a)
 
 # Escolha a coluna para análise
-![image](https://github.com/SylvioLeonZanotti/DataDash/assets/123652053/13208571-a07f-407c-b8ab-b44bf577993d)
+![image](https://github.com/SylvioLeonZanotti/DataDash/assets/123652053/0c034e4b-ef02-48ae-92c1-abd64beb1730)
+
+# Escolha o tipo de gráfico que desja
+![image](https://github.com/SylvioLeonZanotti/DataDash/assets/123652053/8c17e60f-3019-45c0-8805-067ad649055b)
 
 # Veja um preview do gráfico feito
 ![image](https://github.com/SylvioLeonZanotti/DataDash/assets/123652053/7abee92b-e936-4bf0-9d0d-64593c2ee585)
-
-# Escolha o tipo de gráfico que desja
-![image](https://github.com/SylvioLeonZanotti/DataDash/assets/123652053/a6ddd4e0-65fa-4257-b773-ddede97a7745)
 
 # Ou crie dashboards completos de todo o arquivo
 ![image](https://github.com/SylvioLeonZanotti/DataDash/assets/123652053/4af606f0-ebd5-42bf-a8dd-a92d7abb5cbd)
