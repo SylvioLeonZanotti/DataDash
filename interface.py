@@ -4,10 +4,7 @@ from PIL import Image, ImageTk
 import queue
 
 def criar_interface(root, carregar_arquivo, processar_dados, gerar_dashboard, realizar_download, q):
-    # Estilo TTKBootstrap
     style = Style(theme="darkly")
-
-    # Configuração do Canvas para permitir rolagem
     canvas = tk.Canvas(root)
     scrollbar = ttk.Scrollbar(root, orient="vertical", command=canvas.yview)
     scrollable_frame = ttk.Frame(canvas)
@@ -22,15 +19,12 @@ def criar_interface(root, carregar_arquivo, processar_dados, gerar_dashboard, re
     canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
     canvas.configure(yscrollcommand=scrollbar.set)
 
-    # Frame principal
     frame = ttk.Frame(scrollable_frame, padding="20")
     frame.pack(fill='both', expand=True)
 
-    # Título
     titulo = ttk.Label(frame, text="DataDash", font=('Helvetica', 20, 'bold'))
     titulo.grid(row=0, column=0, columnspan=3, pady=10, sticky="ew")
 
-    # Seção de Upload e Iniciar
     upload_frame = ttk.LabelFrame(frame, text="Carregar Arquivo", padding="10")
     upload_frame.grid(row=1, column=0, columnspan=3, pady=10, sticky='ew')
 
@@ -43,22 +37,18 @@ def criar_interface(root, carregar_arquivo, processar_dados, gerar_dashboard, re
     btn_play = ttk.Button(upload_frame, text="Gerar Gráfico", command=processar_dados, state='disabled', bootstyle="success-outline")
     btn_play.grid(row=0, column=2, padx=5, pady=5, sticky='ew')
 
-    # Botão para Gerar Dashboard
     btn_dashboard = ttk.Button(upload_frame, text="Gerar Dashboard", command=gerar_dashboard, state='disabled', bootstyle="info-outline")
     btn_dashboard.grid(row=1, column=2, padx=5, pady=5, sticky='ew')
 
-    # Seletor de Coluna
     ttk.Label(upload_frame, text="Coluna:").grid(row=2, column=0, padx=5, pady=5, sticky='ew')
     coluna_combo = ttk.Combobox(upload_frame, bootstyle="info")
     coluna_combo.grid(row=2, column=1, padx=5, pady=5, sticky='ew')
 
-    # Seletor de Tipo de Gráfico
     ttk.Label(upload_frame, text="Tipo de Gráfico:").grid(row=3, column=0, padx=5, pady=5, sticky='ew')
     grafico_combo = ttk.Combobox(upload_frame, values=["Barras", "Pizza", "Linha"], bootstyle="info")
     grafico_combo.grid(row=3, column=1, padx=5, pady=5, sticky='ew')
     grafico_combo.current(0)
 
-    # Seção de Status
     status_frame = ttk.LabelFrame(frame, text="Status do Processo", padding="10")
     status_frame.grid(row=4, column=0, columnspan=3, pady=10, sticky='ew')
 
@@ -68,21 +58,19 @@ def criar_interface(root, carregar_arquivo, processar_dados, gerar_dashboard, re
     progress_bar = ttk.Progressbar(status_frame, mode='indeterminate', bootstyle="info-striped")
     progress_bar.grid(row=1, column=0, padx=5, pady=5, sticky='ew')
 
-    # Seção de Preview do Gráfico
     preview_frame = ttk.LabelFrame(frame, text="Preview do Gráfico", padding="10")
     preview_frame.grid(row=5, column=0, columnspan=3, pady=10, sticky='ew')
 
     lbl_preview = ttk.Label(preview_frame)
     lbl_preview.grid(row=0, column=0, padx=5, pady=5, sticky='ew')
 
-    # Seção de Download
     download_frame = ttk.LabelFrame(frame, text="Download", padding="10")
     download_frame.grid(row=6, column=0, columnspan=3, pady=10, sticky='ew')
 
     btn_download = ttk.Button(download_frame, text="Download", command=realizar_download, bootstyle="success-outline", state='disabled')
     btn_download.grid(row=0, column=0, padx=5, pady=5, sticky='ew')
 
-    # Atualização do preview do gráfico a partir da fila
+    # Função de preview do gráfico
     def atualizar_preview():
         try:
             while not q.empty():
@@ -104,7 +92,6 @@ def criar_interface(root, carregar_arquivo, processar_dados, gerar_dashboard, re
 
     root.after(100, atualizar_preview)
 
-    # Adicionar o Canvas e a Scrollbar na janela principal
     canvas.pack(side="left", fill="both", expand=True)
     scrollbar.pack(side="right", fill="y")
 
