@@ -17,7 +17,7 @@ def download_image(url, save_path):
 def main():
     root = tk.Tk()
     root.title("DataDash")
-    root.geometry("800x600")  # Definir o tamanho da janela inicial
+    root.geometry("800x600")
 
     # URL da imagem do ícone
     icon_url = "https://cdn.discordapp.com/attachments/1108965932069564416/1260647835871870976/icons8-ms-excel-64.png?ex=66901549&is=668ec3c9&hm=ee861fd0daa9eb079a678b70ffb1b6ddeb4561e85aafb076176cc978ceb50703&"  # Substitua pelo URL da sua imagem
